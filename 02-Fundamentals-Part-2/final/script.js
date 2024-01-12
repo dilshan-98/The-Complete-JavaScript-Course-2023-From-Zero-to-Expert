@@ -2,19 +2,21 @@
 
 /*
 ///////////////////////////////////////
-// Activating Strict Mode
+// Activating Strict Mode - allows to have a more secure code (pin point errors)
+
 let hasDriversLicense = false;
 const passTest = true;
 
 if (passTest) hasDriversLicense = true;
 if (hasDriversLicense) console.log('I can drive :D');
 
-// const interface = 'Audio';
+// const interface = 'Audio'; // -can't have reserved words as variable names 
 // const private = 534;
 
 
 ///////////////////////////////////////
 // Functions
+
 function logger() {
   console.log('My name is Jonas');
 }
