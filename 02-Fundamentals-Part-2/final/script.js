@@ -74,6 +74,8 @@ const yearsUntilRetirement = (birthYeah, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'Jonas')); console.log(yearsUntilRetirement(1980, 'Bob'));
 
+//Arrow fnctions do not get "This" keyword -> will be discussed later 
+
 
 ///////////////////////////////////////
 // Functions Calling Other Functions
@@ -183,9 +185,9 @@ console.log(friends[2]);
 console.log(friends.length);
 console.log(friends[friends.length - 1]);
 
-friends[2] = 'Jay';
+friends[2] = 'Jay';  //=> only primitive values are immutable, array is not primitive
 console.log(friends);
-// friends = ['Bob', 'Alice']
+// friends = ['Bob', 'Alice']  => This cannot do, cant replace a whole array, can only replace element by element
 
 const firstName = 'Jonas';
 const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
@@ -212,11 +214,11 @@ console.log(ages);
 const friends = ['Michael', 'Steven', 'Peter'];
 
 // Add elements
-const newLength = friends.push('Jay');
+const newLength = friends.push('Jay'); //to the back of the array
 console.log(friends);
 console.log(newLength);
 
-friends.unshift('John');
+friends.unshift('John'); //to the front of the array
 console.log(friends);
 
 // Remove elements
